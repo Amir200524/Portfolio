@@ -1,57 +1,116 @@
-/* Design tokens */
-:root {
-  --paper: hsla(251, 28%, 88%, 0.99);
-  --ink: hsla(244, 16%, 17%, 0.95);
-  --brand: hsla(0, 79%, 63%, 0.9);
-  --font: "Raleway", system-ui, sans-serif;
-  --gap: 20px;
-  --container: clamp(280px, calc(100vw - calc(var(--gap) * 2)), 1180px);
-}
 /* General Styles */
-html,
 body {
-  scroll-behavior: smooth;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font);
-}
-body {
-  display: grid;
-  margin: auto;
-  min-height: 100vh;
-  gap: var(--gap);
-  max-width: var(--container);
-}
-a,
-a:any-link {
-  color: currentColor;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color ease-in-out 0.3s;
-}
-a:hover,
-a:focus {
-  color: var(--brand);
-  border-color: currentColor;
-}
-/* Site header and navigation */
-body > header {
-  background: var(--paper);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: var(--gap);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Text readability */
-section p {
+/* Header Section */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* About Section */
+#about {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#about p {
+  font-size: 1.1em;
   line-height: 1.5;
-  max-width: 55ch;
+}
+
+/* Projects Section */
+#projects {
+  padding: 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.project {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
